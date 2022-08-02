@@ -23,7 +23,7 @@ public class CustomerService {
         //todo : check if email not taken
         customerRepository.save(customer);
         //todo : check if fraudster
-        String url  = "http://localhost:8081/api/v1/fraud-check/{customerId}";
+        String url  = "http://FRAUD/api/v1/fraud-check/{customerId}";
         FraudCheckResponse fraudCheckResponse = restTemplate.getForObject(
                 url,
                 FraudCheckResponse.class,
